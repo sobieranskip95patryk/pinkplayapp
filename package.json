@@ -1,0 +1,20 @@
+{
+  "name": "pinkplay",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "concurrently -n API,MOBILE \"npm -w apps/api run start:dev\" \"npm -w apps/mobile run start\"",
+    "lint": "npm -ws run lint",
+    "format": "prettier -w ."
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "eslint": "^9.39.2",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.7.4",
+    "typescript": "^5.9.3"
+  }
+}
